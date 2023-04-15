@@ -19,7 +19,7 @@ def get_prompt() -> str:
         " immediately save important information to files."
     )
     prompt_generator.add_constraint(
-        "If you are unsure how you previously did something or want to recall past"
+        "Acting as an expert prompt engineer, if you are unsure how you previously did something or want to recall past"
         " events, thinking about similar events will help you remember."
     )
     prompt_generator.add_constraint("No user assistance")
@@ -90,19 +90,19 @@ def get_prompt() -> str:
 
     # Add performance evaluations to the PromptGenerator object
     prompt_generator.add_performance_evaluation(
-        "Continuously review and analyze your actions to ensure you are performing to"
+        "Acting as an expert prompt engineer, Continuously review and analyze your actions to ensure you are performing to"
         " the best of your abilities."
     )
     prompt_generator.add_performance_evaluation(
-        "Constructively self-criticize your big-picture behavior constantly."
+        "Acting as an expert prompt engineer, Constructively self-criticize your big-picture behavior constantly."
     )
     prompt_generator.add_performance_evaluation(
-        "Reflect on past decisions and strategies to refine your approach."
+        "Acting as an expert prompt engineer, Reflect on past decisions and strategies to refine your approach."
     )
     prompt_generator.add_performance_evaluation(
         "Every command has a cost, so be smart and efficient. Aim to complete tasks in"
         " the least number of steps."
     )
-
+    print(prompt_generator.generate_prompt_string())
     # Generate the prompt string
     return prompt_generator.generate_prompt_string()
